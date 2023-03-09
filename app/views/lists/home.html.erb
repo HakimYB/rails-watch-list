@@ -1,11 +1,11 @@
-<div class= "banner">
-  <h1>Save any kind of of movies</h1>
+<div class="title">
+  <h1>Save any kind of movies</h1>
 </div>
 
 <div>
   <h2>My Lists</h2>
   <% @lists.each do |l| %>
-  <%= l.name %>
+  <%= link_to  l.name, list_path(l.id), class: 'btn btn-success' %>
   <% end %>
 </div>
 
