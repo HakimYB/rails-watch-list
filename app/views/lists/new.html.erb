@@ -1,0 +1,17 @@
+<div>
+  <h2>My Lists</h2>
+</div>
+
+<%= link_to "Return Home", root_path, class: 'btn btn-success' %>
+
+
+<div class="card" style="width: 18rem;">
+  <% @movies.each do |m| %>
+  <img src='<%= m.poster_url %>' class="card-img-top" alt=<% m.title %>>
+  <div class="card-body">
+    <h5 class="card-title"><%= m.title %></h5>
+    <p class="card-text"><%= m.overview %></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <% end %>
+  </div>
+</div>
