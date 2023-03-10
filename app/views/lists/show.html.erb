@@ -10,7 +10,7 @@
 <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-success' %>
 <%= link_to "Return home", root_path(@list), class: 'btn btn-primary' %>
 
-<div class="row my-2">
+<div class="row my-2 margin-left">
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
